@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Adventure</title>
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="./assets/font.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!--LEFT SIDE NAVIGATION-->
+    <div class="left-side-navigation">
+        <dl>
+            <dt><a href="./home.html"><i class="material-icons">home</i>Home</a></dt>
+            <dt><a href="./tours.html"><i class="material-icons">tour</i>Tours</a></dt>
+            <dt><a href="./booking.html"><i class="material-icons">bookmark_added</i>Booking</a></dt>
+            <dt><a href="./destination.html"><i class="material-icons">share_location</i>Destination</a></dt>
+            <dt><a href="#"><i class="material-icons">article</i>News</a></dt>
+            <dt><a href="./contact.html"><i class="material-icons">contact_support</i>Contact</a></dt>   
+        </dl>
+    </div>
+
+    <!--SIGN IN SIGN Up-->
+    <div class="sign-in-sign-up-container">
+        <div class="forms-container">
+            <div class="signIn-signUp">
+                <form action="#" class="sign-in-form">
+                    <h2 class="titlee">Sign In</h2>
+                    <div class="input-field">
+                        <i class="material-icons">person</i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons">lock</i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn solid">
+                    <p class="social">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+
+                <form action="#" class="sign-up-form">
+                    <h2 class="titlee">Sign up</h2>
+                    <div class="input-field">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-envelope"></i>
+                      <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="input-field">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" />
+                    </div>
+                    <input type="submit" class="btn" value="Sign up" />
+                    <p class="social">Or Sign up with social platforms</p>
+                    <div class="social-media">
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-google"></i>
+                      </a>
+                      <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                  </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New Here ?</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nihil quibusdam nesciunt quaerat autem optio impedit velit consequatur veniam. Quidem dol.</p>
+                    <button class="btn transparent" id="sign-up-btn">Sign Up</button>
+                </div>
+                <img src="./images/left-panel.svg" alt="" class="image">                     
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of Us ?</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nihil quibusdam nesciunt quaerat autem optio impedit velit consequatur veniam. Quidem dol.</p>
+                    <button class="btn transparent" id="sign-in-btn">Sign Up</button>
+                </div>
+                <img src="./images/left-panel.svg" alt="" class="image">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const sign_in_btn = document.querySelector("#sign-in-btn");
+        const sign_up_btn = document.querySelector("#sign-up-btn");
+        const container = document.querySelector(".sign-in-sign-up-container");
+
+        sign_up_btn.addEventListener("click", () => {
+          container.classList.add("sign-up-mode");
+        });
+
+        sign_in_btn.addEventListener("click", () => {
+          container.classList.remove("sign-up-mode");
+        });
+    </script>
+</body>
+</html>
